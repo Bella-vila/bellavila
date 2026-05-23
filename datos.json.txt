@@ -1,0 +1,79 @@
+﻿{
+  "empresa": {
+    "nombre": "BellaVila",
+    "whatsapp": "5351234567",
+    "ubicacion": "La Habana, Cuba",
+    "email": "bellavila@gmail.com",
+    "horario": "Lunes a Sábado: 9:00 AM - 8:00 PM",
+    "mapa": "https://maps.google.com/?q=La+Habana+Cuba",
+    "logo": ""
+  },
+  "carrusel": [
+    {
+      "id": 1,
+      "imagen": "",
+      "titulo": "Pasteles Personalizados",
+      "subtitulo": "Diseños únicos para tus celebraciones",
+      "enlace": "#"
+    },
+    {
+      "id": 2,
+      "imagen": "",
+      "titulo": "Cupcakes Artesanales",
+      "subtitulo": "Sabores irresistibles",
+      "enlace": "#"
+    },
+    {
+      "id": 3,
+      "imagen": "",
+      "titulo": "Ofertas Especiales",
+      "subtitulo": "Descuentos exclusivos",
+      "enlace": "#"
+    }
+  ],
+  "galeria": [
+    {
+      "id": 1,
+      "titulo": "Cake 50 años",
+      "categoria": "cumpleanos",
+      "imagen": "",
+      "descripcion": "Celebración de 50 años",
+      "oferta": false
+    },
+    {
+      "id": 2,
+      "titulo": "Cake floral boda",
+      "categoria": "boda",
+      "imagen": "",
+      "descripcion": "Cake temático para bodas",
+      "oferta": false
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Red Velvet",
+      "precio": "3500 CUP",
+      "precio_oferta": null,
+      "descripcion": "Bizcocho suave de color rojo con crema de queso",
+      "destacado": true,
+      "oferta": false,
+      "imagen": ""
+    },
+    {
+      "id": 2,
+      "nombre": "Tres Leches",
+      "precio": "2800 CUP",
+      "precio_oferta": null,
+      "descripcion": "Esponjoso bizcocho remojado en tres leches",
+      "destacado": true,
+      "oferta": false,
+      "imagen": ""
+    }
+  ],
+  "config": {
+    "instagram": "https://instagram.com/bellavila",
+    "facebook": "https://facebook.com/bellavila",
+    "password": "1234"
+  }
+}

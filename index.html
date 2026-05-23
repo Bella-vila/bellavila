@@ -1,0 +1,1105 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#0D0D0D">
+    <title>BellaVila | Cakes Artesanales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: rgba(20, 20, 25, 0.7);
+            --text: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --gold: #D4A574;
+            --gold-dark: #b8854a;
+            --border: rgba(212, 165, 116, 0.15);
+            --shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            --whatsapp: #25D366;
+            --facebook: #1877F2;
+            --instagram: #E4405F;
+        }
+
+        body.modo-claro {
+            --bg: #f8f6f2;
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --text: #1a1a1a;
+            --text-muted: #666;
+            --border: rgba(212, 165, 116, 0.3);
+            --shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            transition: var(--transition);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        /* Header */
+        .header {
+            background: rgba(var(--bg-rgb), 0.95);
+            backdrop-filter: blur(12px);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+            max-width: 180px;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav button {
+            background: none;
+            border: none;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--text);
+            border-radius: 100px;
+            transition: var(--transition);
+        }
+
+        .nav button:hover {
+            background: rgba(212, 165, 116, 0.1);
+            color: var(--gold);
+        }
+
+        .theme-toggle, .admin-header-btn {
+            background: rgba(212, 165, 116, 0.1) !important;
+            border: 1px solid var(--border);
+        }
+
+        /* Carrusel - ANCHO COMPLETO, ALTURA REDUCIDA */
+        .carrusel-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carrusel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+        }
+
+        .carrusel-slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .carrusel-slide {
+            min-width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+        .carrusel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carrusel-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+            pointer-events: none;
+        }
+
+        .carrusel-texto {
+            position: absolute;
+            bottom: 60px;
+            left: 60px;
+            z-index: 2;
+            max-width: 500px;
+        }
+
+        .carrusel-texto h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .carrusel-texto p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+
+        .carrusel-texto a {
+            background: var(--gold);
+            color: #0a0a0a;
+            padding: 8px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .carrusel-texto a:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .carrusel-boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            font-size: 18px;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .carrusel-boton:hover {
+            background: var(--gold);
+            color: #0a0a0a;
+        }
+
+        .carrusel-prev { left: 20px; }
+        .carrusel-next { right: 20px; }
+        .carrusel-dots { text-align: center; margin-top: 15px; margin-bottom: 30px; }
+        .dot { display: inline-block; width: 8px; height: 8px; margin: 0 6px; background: var(--text-muted); border-radius: 50%; cursor: pointer; transition: var(--transition); }
+        .dot.activo { background: var(--gold); width: 24px; border-radius: 10px; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--gold) 0%, #fff 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body.modo-claro .hero h2 {
+            background: linear-gradient(135deg, var(--gold) 0%, #333 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            background: var(--gold);
+            color: #0a0a0a;
+            border: none;
+            padding: 10px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            margin: 50px 0 15px;
+            letter-spacing: -0.5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* Grid de Productos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 18px 0 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .precio {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .precio-oferta {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .precio-actual {
+            color: #ffd700;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Galería */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .galeria-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .galeria-titulo {
+            padding: 15px;
+            text-align: center;
+            font-size: 15px;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Contacto */
+        .contacto-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 40px;
+        }
+
+        .contacto-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contacto-header h2 {
+            font-size: 28px;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        .contacto-formulario input, .contacto-formulario textarea {
+            width: 100%;
+            padding: 14px 16px;
+            margin: 10px 0;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: var(--gold);
+            color: #0a0a0a;
+            border: none;
+            padding: 14px;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        /* Redes Sociales - Colores REALES */
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition);
+            color: white !important;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            filter: brightness(0.95);
+        }
+
+        .social-instagram {
+            background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .social-facebook {
+            background: #1877F2;
+        }
+
+        .social-whatsapp {
+            background: #25D366;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 200;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: 28px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 16px;
+        }
+
+        .floating-registro {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 200;
+            cursor: pointer;
+        }
+        .icono-registro {
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .modal-registro {
+            display: none;
+            position: fixed;
+            bottom: 95px;
+            left: 25px;
+            width: 280px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 20px;
+            z-index: 201;
+        }
+        .modal-registro input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(0,0,0,0.2);
+            color: var(--text);
+        }
+        .modal-registro button {
+            width: 100%;
+            background: var(--gold);
+            border: none;
+            padding: 10px;
+            border-radius: 100px;
+            font-weight: 600;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        .cerrar-modal {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .instalar-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .detalle-container {
+            background: var(--bg-card);
+            border-radius: 28px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+        }
+
+        .detalle-container h2 { font-size: 28px; color: var(--gold); margin-bottom: 10px; }
+        .detalle-precio { font-size: 32px; font-weight: 700; color: var(--gold); margin: 15px 0; }
+        .personalizacion { background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 20px; margin: 20px 0; }
+        .campo-pedido { margin-bottom: 15px; }
+        .campo-pedido label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--text-muted); }
+        .campo-pedido input, .campo-pedido textarea { width: 100%; padding: 12px; background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border); border-radius: 12px; color: var(--text); }
+        .btn-whatsapp-pedido { background: #25D366; color: white; border: none; padding: 14px; border-radius: 100px; width: 100%; font-weight: 600; cursor: pointer; margin-top: 10px; }
+        .btn-volver { background: none; border: 1px solid var(--border); padding: 10px 24px; border-radius: 100px; cursor: pointer; margin-bottom: 20px; color: var(--text); }
+
+        @media (max-width: 768px) {
+            .header { padding: 12px 20px; }
+            .carrusel-container { height: 280px; }
+            .carrusel-texto { left: 20px; bottom: 30px; }
+            .carrusel-texto h3 { font-size: 1.3rem; }
+            .carrusel-texto p { font-size: 0.8rem; }
+            .hero h2 { font-size: 32px; }
+            .grid, .galeria-grid { grid-template-columns: 1fr; gap: 20px; }
+            .section-title { font-size: 28px; }
+            .social-link { padding: 6px 16px; font-size: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .nav button { padding: 6px 12px; font-size: 12px; }
+            .carrusel-container { height: 220px; }
+            .carrusel-texto h3 { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo-container" id="logoContainer" onclick="mostrarPagina('inicio')">
+        <div id="logoImageContainer"></div>
+        <div class="logo-text" id="logoSoloTexto">BellaVila</div>
+    </div>
+    <div class="nav">
+        <button onclick="mostrarPagina('inicio')">Inicio</button>
+        <button onclick="mostrarPagina('productos')">Productos</button>
+        <button onclick="mostrarPagina('galeria')">Galería</button>
+        <button onclick="mostrarPagina('contacto')">Contacto</button>
+        <button onclick="mostrarPagina('instalar')">📱 App</button>
+        <button onclick="toggleTheme()" class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="admin-header-btn" onclick="mostrarAdminLogin()">🔒</button>
+    </div>
+</div>
+
+<!-- CARRUSEL - ANCHO COMPLETO, ALTURA REDUCIDA -->
+<div class="carrusel-wrapper">
+    <div id="carruselContainer" class="carrusel-container"></div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="inicio">
+    <h2>Cakes que endulzan tus momentos</h2>
+    <p>Hechos a mano en Cuba con ingredientes naturales</p>
+    <button onclick="mostrarPagina('productos')">Ver catálogo →</button>
+</div>
+
+<div id="toast" class="toast" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--gold); color:#0a0a0a; padding:10px 20px; border-radius:50px; z-index:400; display:none; font-weight:600;"></div>
+
+<div id="toastInvitacion" style="position:fixed; bottom:95px; left:85px; background:var(--gold); color:#0a0a0a; padding:12px 18px; border-radius:20px; z-index:250; display:none; font-size:13px; max-width:220px; text-align:center;">
+    <span>🔔 ¡Regístrate para novedades!</span>
+    <button onclick="toggleModalRegistro()" style="background:#0a0a0a; color:white; border:none; padding:6px 12px; border-radius:30px; margin-top:8px; cursor:pointer; width:100%;">Registrarme</button>
+</div>
+
+<div class="floating-registro">
+    <div class="icono-registro" onclick="toggleModalRegistro()">🔔</div>
+    <div id="modalRegistro" class="modal-registro">
+        <button class="cerrar-modal" onclick="toggleModalRegistro()">×</button>
+        <h3>📱 Recibe novedades</h3>
+        <input type="text" id="regNombre" placeholder="Tu nombre">
+        <input type="tel" id="regTelefono" placeholder="Móvil (ej: 5351234567)">
+        <button onclick="registrarCliente()">Registrarse</button>
+    </div>
+</div>
+
+<div id="instalar" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <div class="instalar-card">
+        <h2>📱 Instalar BellaVila como App</h2>
+        <p>Instala nuestra app en tu teléfono y accede más rápido</p>
+        <div style="text-align:left; background:rgba(0,0,0,0.2); padding:20px; border-radius:20px;">
+            <p><strong>📱 En Android (Chrome):</strong></p>
+            <p>1. Abre este sitio web en Chrome</p>
+            <p>2. Toca los 3 puntos ⋮ arriba a la derecha</p>
+            <p>3. Selecciona "Instalar aplicación"</p>
+            <p style="margin-top:15px;"><strong>🍏 En iPhone (Safari):</strong></p>
+            <p>1. Abre este sitio web en Safari</p>
+            <p>2. Toca el botón Compartir 📤</p>
+            <p>3. Selecciona "Agregar a pantalla de inicio"</p>
+        </div>
+    </div>
+</div>
+
+<div id="inicio" class="pagina mostrar" style="display: block;">
+    <h2 class="section-title">Nuestros favoritos</h2>
+    <p class="section-subtitle">Los más pedidos por nuestros clientes</p>
+    <div id="homeProductos" class="grid"></div>
+    <h2 class="section-title">🎂 Trabajos recientes</h2>
+    <p class="section-subtitle">Creaciones personalizadas para cada ocasión</p>
+    <div id="galeriaContainer" class="galeria-grid"></div>
+</div>
+
+<div id="productos" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <h2 class="section-title">Nuestros Cakes</h2>
+    <p class="section-subtitle">Deliciosos sabores para celebrar la vida</p>
+    <div id="listaProductos" class="grid"></div>
+</div>
+
+<div id="galeria" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <h2 class="section-title">🎨 Nuestros Trabajos</h2>
+    <p class="section-subtitle">Inspiración para tu próximo evento</p>
+    <div id="galeriaContainerPage" class="galeria-grid"></div>
+</div>
+
+<div id="detalle" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <button class="btn-volver" onclick="mostrarPagina('productos')">← Volver a productos</button>
+    <div id="detalleContenido" class="detalle-container"></div>
+</div>
+
+<div id="contacto" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <div class="contacto-card">
+        <div class="contacto-header">
+            <h2>Contáctanos</h2>
+            <p>Estamos para ayudarte con tu pedido</p>
+        </div>
+        <div style="text-align:center;">
+            <h3>📱 WhatsApp Directo</h3>
+            <a href="#" id="whatsappLink" class="whatsapp-btn" target="_blank">💬 Abrir WhatsApp</a>
+            <p>Número: <span id="whatsappNumero"></span></p>
+        </div>
+        <div class="contacto-formulario">
+            <h3>📝 Escríbenos un mensaje</h3>
+            <input type="text" id="msgNombre" placeholder="¿Cómo te llamas?">
+            <input type="tel" id="msgTelefono" placeholder="Ej: 5351234567">
+            <textarea id="msgMensaje" rows="3" placeholder="Cuéntame qué producto te interesa..."></textarea>
+            <button class="btn-enviar" onclick="guardarMensaje()">📩 Enviar mensaje</button>
+            <div id="mensajeFeedback" style="display:none; margin-top:15px; text-align:center; color:var(--gold);">✅ Mensaje enviado</div>
+        </div>
+    </div>
+</div>
+
+<div id="nosotros" class="pagina" style="display:none; padding: 30px 20px 40px;">
+    <div style="max-width:800px; margin:0 auto; background:var(--bg-card); border-radius:28px; padding:40px; text-align:center;">
+        <h2 style="color:var(--gold); margin-bottom:15px;">🇨🇺 Nuestra historia</h2>
+        <p id="textoNosotros" style="color:var(--text-muted); line-height:1.6;"></p>
+    </div>
+</div>
+
+<!-- FOOTER CON REDES SOCIALES CON COLORES REALES -->
+<div class="footer">
+    <div class="footer-social">
+        <a href="#" target="_blank" id="footerInstagram" class="social-link social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" target="_blank" id="footerFacebook" class="social-link social-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" id="footerWhatsapp" class="social-link social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <p>© 2026 BellaVila | Cakes Artesanales Cuba</p>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script>
+    let datosGlobales = null;
+    let passAdmin = "1234";
+    let numWhatsapp = "5351234567";
+    let clientes = JSON.parse(localStorage.getItem("clientesBella")) || [];
+    let mensajes = JSON.parse(localStorage.getItem("mensajesBella")) || [];
+    let textoNosotros = "BellaVila nació en La Habana, con el sueño de compartir cakes artesanales llenos de sabor y amor. 🎂";
+    let modoOscuro = localStorage.getItem("modoOscuro") !== "false";
+    
+    let indiceCarrusel = 0;
+    let intervaloAuto = null;
+    
+    async function cargarDatos() {
+        try {
+            const respuesta = await fetch('datos.json?' + Date.now());
+            if (respuesta.ok) {
+                datosGlobales = await respuesta.json();
+                console.log("✅ Datos cargados");
+                actualizarTodo();
+            } else {
+                datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {} };
+                actualizarTodo();
+            }
+        } catch(error) {
+            datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {} };
+            actualizarTodo();
+        }
+    }
+    
+    function actualizarTodo() {
+        actualizarCarrusel();
+        actualizarProductos();
+        actualizarGaleria();
+        actualizarContacto();
+        actualizarRedesSociales();
+        actualizarLogo();
+        document.getElementById("textoNosotros").innerText = textoNosotros;
+    }
+    
+    function actualizarLogo() {
+        let container = document.getElementById("logoImageContainer");
+        let texto = document.getElementById("logoSoloTexto");
+        if (!container) return;
+        container.innerHTML = "";
+        if (datosGlobales.empresa && datosGlobales.empresa.logo && datosGlobales.empresa.logo !== "") {
+            let img = document.createElement("img");
+            img.src = datosGlobales.empresa.logo;
+            img.className = "logo-img";
+            img.onerror = () => { img.style.display = "none"; texto.style.display = "inline-block"; };
+            container.appendChild(img);
+            texto.style.display = "none";
+        } else {
+            texto.style.display = "inline-block";
+        }
+    }
+    
+    function actualizarCarrusel() {
+        let container = document.getElementById("carruselContainer");
+        if (!container) return;
+        let slides = datosGlobales.carrusel || [];
+        if (slides.length === 0) {
+            container.innerHTML = '<div style="height:400px; display:flex; align-items:center; justify-content:center; background:#1a1a1a;">Agrega imágenes desde el admin</div>';
+            return;
+        }
+        let html = `<div class="carrusel-slides" id="carruselSlides">`;
+        for (let item of slides) {
+            html += `<div class="carrusel-slide">
+                ${item.imagen ? `<img src="${item.imagen}" alt="${item.titulo}">` : '<div style="height:100%; background:linear-gradient(135deg,#2a2a2a,#1a1a1a); display:flex; align-items:center; justify-content:center; font-size:60px;">🍰</div>'}
+                <div class="carrusel-texto">
+                    <h3>${item.titulo || ""}</h3>
+                    <p>${item.subtitulo || ""}</p>
+                    ${item.enlace ? `<a href="${item.enlace}" target="_blank">Ver oferta →</a>` : ""}
+                </div>
+            </div>`;
+        }
+        html += `</div><button class="carrusel-boton carrusel-prev" onclick="carruselAnterior()">‹</button><button class="carrusel-boton carrusel-next" onclick="carruselSiguiente()">›</button><div class="carrusel-dots" id="carruselDots"></div>`;
+        container.innerHTML = html;
+        actualizarDots();
+        iniciarAutomatico();
+    }
+    
+    function actualizarDots() {
+        let dots = document.getElementById("carruselDots");
+        if (!dots) return;
+        let slides = document.querySelectorAll('.carrusel-slide');
+        let html = "";
+        for (let i = 0; i < slides.length; i++) {
+            html += `<span class="dot ${i === indiceCarrusel ? 'activo' : ''}" onclick="irSlide(${i})"></span>`;
+        }
+        dots.innerHTML = html;
+        let slidesContainer = document.getElementById("carruselSlides");
+        if (slidesContainer) slidesContainer.style.transform = `translateX(-${indiceCarrusel * 100}%)`;
+    }
+    
+    function carruselSiguiente() {
+        let slides = document.querySelectorAll('.carrusel-slide');
+        if (slides.length) {
+            indiceCarrusel = (indiceCarrusel + 1) % slides.length;
+            actualizarDots();
+        }
+    }
+    function carruselAnterior() {
+        let slides = document.querySelectorAll('.carrusel-slide');
+        if (slides.length) {
+            indiceCarrusel = (indiceCarrusel - 1 + slides.length) % slides.length;
+            actualizarDots();
+        }
+    }
+    function irSlide(i) { indiceCarrusel = i; actualizarDots(); }
+    function iniciarAutomatico() {
+        if (intervaloAuto) clearInterval(intervaloAuto);
+        intervaloAuto = setInterval(() => carruselSiguiente(), 5000);
+    }
+    
+    function actualizarProductos() {
+        let productos = datosGlobales.productos || [];
+        let homeDiv = document.getElementById("homeProductos");
+        let prodDiv = document.getElementById("listaProductos");
+        
+        let productosHTML = productos.map(p => `
+            <div class="card" onclick="verDetalle(${p.id})">
+                ${p.imagen ? `<img src="${p.imagen}" alt="${p.nombre}">` : '<div style="height:220px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#2a2a2a,#1a1a1a); font-size:50px;">🍰</div>'}
+                <h3>${p.nombre}</h3>
+                <div class="precio">
+                    ${p.precio_oferta ? `<span class="precio-oferta">${p.precio}</span> <span class="precio-actual">${p.precio_oferta}</span>` : `<span class="precio-actual">${p.precio}</span>`}
+                </div>
+            </div>
+        `).join("");
+        
+        if (homeDiv) homeDiv.innerHTML = productos.slice(0,3).map(p => `
+            <div class="card" onclick="verDetalle(${p.id})">
+                ${p.imagen ? `<img src="${p.imagen}">` : '<div style="height:220px; display:flex; align-items:center; justify-content:center; font-size:50px;">🍰</div>'}
+                <h3>${p.nombre}</h3>
+                <div class="precio">
+                    ${p.precio_oferta ? `<span class="precio-oferta">${p.precio}</span> <span class="precio-actual">${p.precio_oferta}</span>` : `<span class="precio-actual">${p.precio}</span>`}
+                </div>
+            </div>
+        `).join("");
+        
+        if (prodDiv) prodDiv.innerHTML = productosHTML;
+    }
+    
+    function verDetalle(id) {
+        let p = datosGlobales.productos.find(p => p.id === id);
+        if (!p) return;
+        let html = `<h2>${p.nombre}</h2>
+            <div class="detalle-precio">${p.precio_oferta ? p.precio_oferta : p.precio}</div>
+            <p>${p.descripcion}</p>
+            <div class="personalizacion">
+                <h3>Personaliza tu pedido</h3>
+                <div class="campo-pedido"><label>Cantidad:</label><input type="number" id="cantidad" value="1" min="1"></div>
+                <div class="campo-pedido"><label>Tamaño:</label><input type="text" id="tamano" placeholder="Pequeño, Mediano, Grande"></div>
+                <div class="campo-pedido"><label>Sabor:</label><input type="text" id="sabor" placeholder="Vainilla, Chocolate, Fresa"></div>
+                <div class="campo-pedido"><label>Mensaje especial:</label><textarea id="mensajeEspecial" rows="2"></textarea></div>
+            </div>
+            <div class="resumen-pedido" id="resumenPedido"></div>
+            <button class="btn-whatsapp-pedido" onclick="enviarPedido('${p.nombre}','${p.precio}')">📱 Enviar pedido</button>
+            <button class="btn-volver" onclick="mostrarPagina('productos')" style="margin-top:20px;">← Volver</button>`;
+        document.getElementById("detalleContenido").innerHTML = html;
+        let actualizarRes = () => {
+            let r = document.getElementById("resumenPedido");
+            if (r) r.innerHTML = `<strong>Resumen</strong><br>Cantidad: ${document.getElementById("cantidad")?.value || 1}<br>Tamaño: ${document.getElementById("tamano")?.value || ""}<br>Sabor: ${document.getElementById("sabor")?.value || ""}<br>${document.getElementById("mensajeEspecial")?.value ? `Mensaje: "${document.getElementById("mensajeEspecial").value}"` : ""}`;
+        };
+        actualizarRes();
+        ["cantidad", "tamano", "sabor", "mensajeEspecial"].forEach(id => {
+            let el = document.getElementById(id);
+            if (el) el.addEventListener("input", actualizarRes);
+        });
+        mostrarPagina("detalle");
+    }
+    
+    function enviarPedido(nombre, precio) {
+        let cantidad = document.getElementById("cantidad")?.value || 1;
+        let tamano = document.getElementById("tamano")?.value || "";
+        let sabor = document.getElementById("sabor")?.value || "";
+        let mensaje = document.getElementById("mensajeEspecial")?.value || "";
+        let precioFinal = datosGlobales.productos.find(p => p.nombre === nombre)?.precio_oferta || precio;
+        let msg = `🍰 *PEDIDO BELLAVILA* 🍰%0A%0A*Producto:* ${nombre}%0A*Precio:* ${precioFinal}%0A*Cantidad:* ${cantidad}%0A*Tamaño:* ${tamano}%0A*Sabor:* ${sabor}%0A${mensaje ? `*Mensaje:* ${mensaje}%0A` : ""}`;
+        window.open(`https://wa.me/${numWhatsapp}?text=${msg}`, "_blank");
+    }
+    
+    function actualizarGaleria() {
+        let galeria = datosGlobales.galeria || [];
+        let container = document.getElementById("galeriaContainer");
+        let containerPage = document.getElementById("galeriaContainerPage");
+        let galeriaHTML = galeria.map(foto => `
+            <div class="galeria-item" onclick="abrirModalFoto('${foto.imagen}')">
+                ${foto.imagen ? `<img src="${foto.imagen}" alt="${foto.titulo}">` : '<div style="height:260px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#2a2a2a,#1a1a1a); font-size:50px;">🍰</div>'}
+                ${foto.titulo ? `<div class="galeria-titulo">${foto.titulo}</div>` : ''}
+            </div>
+        `).join("");
+        if (container) container.innerHTML = galeriaHTML.slice(0,3);
+        if (containerPage) containerPage.innerHTML = galeriaHTML;
+    }
+    
+    function abrirModalFoto(url) {
+        if (!url) return;
+        let modal = document.createElement("div");
+        modal.className = "modal";
+        modal.style.display = "flex";
+        modal.innerHTML = `<div class="modal-content"><img src="${url}" alt=""><button onclick="this.closest('.modal').remove()" style="margin-top:15px; background:var(--gold); border:none; padding:8px 20px; border-radius:30px; cursor:pointer;">Cerrar</button></div>`;
+        modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        document.body.appendChild(modal);
+    }
+    
+    function actualizarContacto() {
+        let config = datosGlobales.config || {};
+        let empresa = datosGlobales.empresa || {};
+        numWhatsapp = empresa.whatsapp || config.whatsapp || "5351234567";
+        let link = document.getElementById("whatsappLink");
+        let span = document.getElementById("whatsappNumero");
+        if (link) link.href = `https://wa.me/${numWhatsapp}`;
+        if (span) span.innerText = `+${numWhatsapp}`;
+    }
+    
+    function actualizarRedesSociales() {
+        let config = datosGlobales.config || {};
+        let ig = document.getElementById("footerInstagram");
+        let fb = document.getElementById("footerFacebook");
+        let wp = document.getElementById("footerWhatsapp");
+        if (ig) ig.href = config.instagram || "https://instagram.com/";
+        if (fb) fb.href = config.facebook || "https://facebook.com/";
+        if (wp) wp.href = `https://wa.me/${numWhatsapp}`;
+    }
+    
+    function guardarMensaje() {
+        let n = document.getElementById("msgNombre").value;
+        let t = document.getElementById("msgTelefono").value;
+        let m = document.getElementById("msgMensaje").value;
+        if (!n || !m) { alert("Completa nombre y mensaje"); return; }
+        mensajes.unshift({ nombre: n, telefono: t, mensaje: m, fecha: new Date().toLocaleString() });
+        localStorage.setItem("mensajesBella", JSON.stringify(mensajes));
+        document.getElementById("msgNombre").value = "";
+        document.getElementById("msgTelefono").value = "";
+        document.getElementById("msgMensaje").value = "";
+        let fb = document.getElementById("mensajeFeedback");
+        fb.style.display = "block";
+        setTimeout(() => fb.style.display = "none", 3000);
+        let noti = `🍰 *NUEVO MENSAJE* 🍰%0A%0A*Cliente:* ${n}%0A*Teléfono:* ${t || "No"}%0A*Mensaje:* ${m}`;
+        window.open(`https://wa.me/${numWhatsapp}?text=${noti}`, "_blank");
+        mostrarToast("✅ Mensaje enviado");
+    }
+    
+    function registrarCliente() {
+        let n = document.getElementById("regNombre").value;
+        let t = document.getElementById("regTelefono").value;
+        if (!n || !t) { alert("Completa tus datos"); return; }
+        if (!t.match(/^53[0-9]{8}$/)) { alert("Formato: 5351234567"); return; }
+        if (clientes.find(c => c.telefono === t)) { alert("Ya registrado"); return; }
+        clientes.push({ id: Date.now(), nombre: n, telefono: t, fecha: new Date().toLocaleString() });
+        localStorage.setItem("clientesBella", JSON.stringify(clientes));
+        document.getElementById("regNombre").value = "";
+        document.getElementById("regTelefono").value = "";
+        toggleModalRegistro();
+        mostrarToast("✅ Registrado correctamente");
+        document.getElementById("toastInvitacion").style.display = "none";
+    }
+    
+    function mostrarToast(m) {
+        let t = document.getElementById("toast");
+        t.innerText = m;
+        t.style.display = "block";
+        setTimeout(() => t.style.display = "none", 3000);
+    }
+    
+    function mostrarPagina(pagina) {
+        document.querySelectorAll(".pagina").forEach(p => p.style.display = "none");
+        document.getElementById(pagina).style.display = "block";
+        if (pagina === "inicio") actualizarCarrusel();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function toggleTheme() {
+        modoOscuro = !modoOscuro;
+        if (modoOscuro) {
+            document.body.classList.remove("modo-claro");
+            document.getElementById("themeToggle").innerHTML = "🌙";
+        } else {
+            document.body.classList.add("modo-claro");
+            document.getElementById("themeToggle").innerHTML = "☀️";
+        }
+        localStorage.setItem("modoOscuro", modoOscuro);
+        actualizarCarrusel();
+    }
+    
+    function mostrarAdminLogin() {
+        let p = prompt("🔒 Contraseña:");
+        if (p === passAdmin) {
+            window.location.href = "admin.html";
+        } else {
+            alert("Contraseña incorrecta");
+        }
+    }
+    
+    function toggleModalRegistro() {
+        let m = document.getElementById("modalRegistro");
+        m.style.display = m.style.display === "block" ? "none" : "block";
+    }
+    
+    function aplicarModoGuardado() {
+        if (modoOscuro) document.body.classList.remove("modo-claro");
+        else document.body.classList.add("modo-claro");
+        document.getElementById("themeToggle").innerHTML = modoOscuro ? "🌙" : "☀️";
+    }
+    
+    aplicarModoGuardado();
+    cargarDatos();
+    
+    setTimeout(() => {
+        let toast = document.getElementById("toastInvitacion");
+        if (toast) toast.style.display = "block";
+        setTimeout(() => toast.style.display = "none", 8000);
+    }, 5000);
+</script>
+</body>
+</html>
