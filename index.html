@@ -46,7 +46,6 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-        /* Header */
         .header {
             background: rgba(var(--bg-rgb), 0.95);
             backdrop-filter: blur(12px);
@@ -115,7 +114,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Carrusel - ANCHO COMPLETO, ALTURA REDUCIDA */
         .carrusel-wrapper {
             position: relative;
             width: 100%;
@@ -231,7 +229,6 @@
         .dot { display: inline-block; width: 8px; height: 8px; margin: 0 6px; background: var(--text-muted); border-radius: 50%; cursor: pointer; transition: var(--transition); }
         .dot.activo { background: var(--gold); width: 24px; border-radius: 10px; }
 
-        /* Hero */
         .hero {
             text-align: center;
             padding: 50px 20px 30px;
@@ -291,7 +288,6 @@
             margin-bottom: 40px;
         }
 
-        /* Grid de Productos */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -351,7 +347,6 @@
             font-weight: 700;
         }
 
-        /* Galería */
         .galeria-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -389,7 +384,6 @@
             font-weight: 500;
         }
 
-        /* Contacto */
         .contacto-card {
             max-width: 900px;
             margin: 0 auto;
@@ -452,7 +446,6 @@
             margin-top: 15px;
         }
 
-        /* Redes Sociales - Colores REALES */
         .footer-social {
             display: flex;
             justify-content: center;
@@ -673,12 +666,10 @@
     </div>
 </div>
 
-<!-- CARRUSEL - ANCHO COMPLETO, ALTURA REDUCIDA -->
 <div class="carrusel-wrapper">
     <div id="carruselContainer" class="carrusel-container"></div>
 </div>
 
-<!-- HERO -->
 <div class="hero" id="inicio">
     <h2>Cakes que endulzan tus momentos</h2>
     <p>Hechos a mano en Cuba con ingredientes naturales</p>
@@ -775,7 +766,6 @@
     </div>
 </div>
 
-<!-- FOOTER CON REDES SOCIALES CON COLORES REALES -->
 <div class="footer">
     <div class="footer-social">
         <a href="#" target="_blank" id="footerInstagram" class="social-link social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
@@ -929,32 +919,63 @@
         if (prodDiv) prodDiv.innerHTML = productosHTML;
     }
     
+    // ==================== FUNCIÓN VER DETALLE CORREGIDA ====================
     function verDetalle(id) {
         let p = datosGlobales.productos.find(p => p.id === id);
         if (!p) return;
-        let html = `<h2>${p.nombre}</h2>
-            <div class="detalle-precio">${p.precio_oferta ? p.precio_oferta : p.precio}</div>
-            <p>${p.descripcion}</p>
+        
+        // Crear HTML de la imagen (si existe)
+        let imagenHtml = '';
+        if (p.imagen && p.imagen !== "") {
+            imagenHtml = `
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="${p.imagen}" alt="${p.nombre}" style="width: 100%; max-width: 400px; border-radius: 20px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" onclick="abrirModalFoto('${p.imagen}')">
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">📸 Haz clic en la imagen para verla más grande</p>
+                </div>
+            `;
+        } else {
+            imagenHtml = `<div style="text-align: center; margin-bottom: 20px; font-size: 80px;">🍰</div>`;
+        }
+        
+        let html = `
+            ${imagenHtml}
+            <h2>${p.nombre}</h2>
+            <div class="detalle-precio">
+                ${p.precio_oferta ? `<span style="text-decoration: line-through; font-size: 24px; color: var(--text-muted); margin-right: 15px;">${p.precio}</span> <span style="color: #ffd700;">${p.precio_oferta}</span>` : `<span style="color: #ffd700;">${p.precio}</span>`}
+            </div>
+            <p style="white-space: pre-line; line-height: 1.6;">${p.descripcion}</p>
             <div class="personalizacion">
-                <h3>Personaliza tu pedido</h3>
+                <h3>📝 Personaliza tu pedido</h3>
                 <div class="campo-pedido"><label>Cantidad:</label><input type="number" id="cantidad" value="1" min="1"></div>
                 <div class="campo-pedido"><label>Tamaño:</label><input type="text" id="tamano" placeholder="Pequeño, Mediano, Grande"></div>
-                <div class="campo-pedido"><label>Sabor:</label><input type="text" id="sabor" placeholder="Vainilla, Chocolate, Fresa"></div>
-                <div class="campo-pedido"><label>Mensaje especial:</label><textarea id="mensajeEspecial" rows="2"></textarea></div>
+                <div class="campo-pedido"><label>Sabor:</label><input type="text" id="sabor" placeholder="Vainilla, Chocolate, Fresa, Tres Leches"></div>
+                <div class="campo-pedido"><label>Mensaje especial:</label><textarea id="mensajeEspecial" rows="2" placeholder="Ej: Feliz Cumpleaños..."></textarea></div>
             </div>
             <div class="resumen-pedido" id="resumenPedido"></div>
-            <button class="btn-whatsapp-pedido" onclick="enviarPedido('${p.nombre}','${p.precio}')">📱 Enviar pedido</button>
-            <button class="btn-volver" onclick="mostrarPagina('productos')" style="margin-top:20px;">← Volver</button>`;
+            <button class="btn-whatsapp-pedido" onclick="enviarPedido('${p.nombre}','${p.precio}')">📱 Enviar pedido por WhatsApp</button>
+            <button class="btn-volver" onclick="mostrarPagina('productos')" style="margin-top: 20px;">← Volver a productos</button>
+        `;
+        
         document.getElementById("detalleContenido").innerHTML = html;
+        
+        // Actualizar resumen del pedido
         let actualizarRes = () => {
             let r = document.getElementById("resumenPedido");
-            if (r) r.innerHTML = `<strong>Resumen</strong><br>Cantidad: ${document.getElementById("cantidad")?.value || 1}<br>Tamaño: ${document.getElementById("tamano")?.value || ""}<br>Sabor: ${document.getElementById("sabor")?.value || ""}<br>${document.getElementById("mensajeEspecial")?.value ? `Mensaje: "${document.getElementById("mensajeEspecial").value}"` : ""}`;
+            if (r) r.innerHTML = `
+                <strong>📋 Resumen del pedido</strong><br>
+                🍰 Producto: ${p.nombre}<br>
+                🔢 Cantidad: ${document.getElementById("cantidad")?.value || 1}<br>
+                📏 Tamaño: ${document.getElementById("tamano")?.value || "No especificado"}<br>
+                🍫 Sabor: ${document.getElementById("sabor")?.value || "No especificado"}<br>
+                ${document.getElementById("mensajeEspecial")?.value ? `💬 Mensaje: "${document.getElementById("mensajeEspecial").value}"` : ""}
+            `;
         };
         actualizarRes();
         ["cantidad", "tamano", "sabor", "mensajeEspecial"].forEach(id => {
             let el = document.getElementById(id);
             if (el) el.addEventListener("input", actualizarRes);
         });
+        
         mostrarPagina("detalle");
     }
     
@@ -963,7 +984,8 @@
         let tamano = document.getElementById("tamano")?.value || "";
         let sabor = document.getElementById("sabor")?.value || "";
         let mensaje = document.getElementById("mensajeEspecial")?.value || "";
-        let precioFinal = datosGlobales.productos.find(p => p.nombre === nombre)?.precio_oferta || precio;
+        let producto = datosGlobales.productos.find(p => p.nombre === nombre);
+        let precioFinal = producto?.precio_oferta || precio;
         let msg = `🍰 *PEDIDO BELLAVILA* 🍰%0A%0A*Producto:* ${nombre}%0A*Precio:* ${precioFinal}%0A*Cantidad:* ${cantidad}%0A*Tamaño:* ${tamano}%0A*Sabor:* ${sabor}%0A${mensaje ? `*Mensaje:* ${mensaje}%0A` : ""}`;
         window.open(`https://wa.me/${numWhatsapp}?text=${msg}`, "_blank");
     }
