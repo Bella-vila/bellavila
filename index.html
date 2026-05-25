@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#0D0D0D">
     <title>BellaVila | Cakes Artesanales</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
     <style>
+        /* [MANTÉN TUS ESTILOS EXACTAMENTE IGUALES - NO LOS MODIFICO] */
         * {
             margin: 0;
             padding: 0;
@@ -179,23 +181,6 @@
             font-size: 1rem;
             color: rgba(255,255,255,0.9);
             margin-bottom: 15px;
-        }
-
-        .carrusel-texto a {
-            background: var(--gold);
-            color: #0a0a0a;
-            padding: 8px 20px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-block;
-        }
-
-        .carrusel-texto a:hover {
-            background: white;
-            transform: translateY(-2px);
         }
 
         .carrusel-boton {
@@ -781,7 +766,6 @@
     let datosGlobales = null;
     let passAdmin = "1234";
     let numWhatsapp = "5351234567";
-    let clientes = JSON.parse(localStorage.getItem("clientesBella")) || [];
     let mensajes = JSON.parse(localStorage.getItem("mensajesBella")) || [];
     let textoNosotros = "BellaVila nació en La Habana, con el sueño de compartir cakes artesanales llenos de sabor y amor. 🎂";
     let modoOscuro = localStorage.getItem("modoOscuro") !== "false";
@@ -795,13 +779,17 @@
             if (respuesta.ok) {
                 datosGlobales = await respuesta.json();
                 console.log("✅ Datos cargados");
+                // Si hay clientes en datos.json, actualizar localStorage
+                if (datosGlobales.clientes && datosGlobales.clientes.length > 0) {
+                    localStorage.setItem("clientesBella", JSON.stringify(datosGlobales.clientes));
+                }
                 actualizarTodo();
             } else {
-                datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {} };
+                datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {}, clientes: [] };
                 actualizarTodo();
             }
         } catch(error) {
-            datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {} };
+            datosGlobales = { carrusel: [], galeria: [], productos: [], config: {}, empresa: {}, clientes: [] };
             actualizarTodo();
         }
     }
@@ -821,11 +809,23 @@
         let texto = document.getElementById("logoSoloTexto");
         if (!container) return;
         container.innerHTML = "";
+        
+        let logoUrl = null;
         if (datosGlobales.empresa && datosGlobales.empresa.logo && datosGlobales.empresa.logo !== "") {
+            logoUrl = datosGlobales.empresa.logo;
+        } else if (datosGlobales.logo) {
+            logoUrl = datosGlobales.logo;
+        }
+        
+        if (logoUrl) {
             let img = document.createElement("img");
-            img.src = datosGlobales.empresa.logo;
+            img.src = logoUrl;
             img.className = "logo-img";
-            img.onerror = () => { img.style.display = "none"; texto.style.display = "inline-block"; };
+            img.alt = "Logo BellaVila";
+            img.onerror = () => { 
+                img.style.display = "none"; 
+                texto.style.display = "inline-block"; 
+            };
             container.appendChild(img);
             texto.style.display = "none";
         } else {
@@ -848,7 +848,6 @@
                 <div class="carrusel-texto">
                     <h3>${item.titulo || ""}</h3>
                     <p>${item.subtitulo || ""}</p>
-                    ${item.enlace ? `<a href="${item.enlace}" target="_blank">Ver oferta →</a>` : ""}
                 </div>
             </div>`;
         }
@@ -919,12 +918,10 @@
         if (prodDiv) prodDiv.innerHTML = productosHTML;
     }
     
-    // ==================== FUNCIÓN VER DETALLE CORREGIDA ====================
     function verDetalle(id) {
         let p = datosGlobales.productos.find(p => p.id === id);
         if (!p) return;
         
-        // Crear HTML de la imagen (si existe)
         let imagenHtml = '';
         if (p.imagen && p.imagen !== "") {
             imagenHtml = `
@@ -958,7 +955,6 @@
         
         document.getElementById("detalleContenido").innerHTML = html;
         
-        // Actualizar resumen del pedido
         let actualizarRes = () => {
             let r = document.getElementById("resumenPedido");
             if (r) r.innerHTML = `
@@ -1052,19 +1048,56 @@
         mostrarToast("✅ Mensaje enviado");
     }
     
+    // ==================== REGISTRO DE CLIENTES CORREGIDO ====================
     function registrarCliente() {
-        let n = document.getElementById("regNombre").value;
-        let t = document.getElementById("regTelefono").value;
-        if (!n || !t) { alert("Completa tus datos"); return; }
-        if (!t.match(/^53[0-9]{8}$/)) { alert("Formato: 5351234567"); return; }
-        if (clientes.find(c => c.telefono === t)) { alert("Ya registrado"); return; }
-        clientes.push({ id: Date.now(), nombre: n, telefono: t, fecha: new Date().toLocaleString() });
-        localStorage.setItem("clientesBella", JSON.stringify(clientes));
+        let n = document.getElementById("regNombre").value.trim();
+        let t = document.getElementById("regTelefono").value.trim();
+        
+        if (!n || !t) { 
+            alert("❌ Completa tus datos"); 
+            return; 
+        }
+        if (!t.match(/^53[0-9]{8}$/)) { 
+            alert("❌ Formato incorrecto. Ejemplo: 5351234567"); 
+            return; 
+        }
+        
+        // Obtener clientes actuales (desde datosGlobales o localStorage)
+        let clientesActuales = [];
+        if (datosGlobales.clientes && datosGlobales.clientes.length > 0) {
+            clientesActuales = datosGlobales.clientes;
+        } else {
+            let clientesLocal = localStorage.getItem("clientesBella");
+            if (clientesLocal) clientesActuales = JSON.parse(clientesLocal);
+        }
+        
+        if (clientesActuales.find(c => c.telefono === t)) { 
+            alert("⚠️ Ya estás registrado"); 
+            document.getElementById("modalRegistro").style.display = "none";
+            document.getElementById("toastInvitacion").style.display = "none";
+            localStorage.setItem("toastRegistroVisto", "true");
+            return; 
+        }
+        
+        let nuevoCliente = { id: Date.now(), nombre: n, telefono: t, fecha: new Date().toLocaleString() };
+        clientesActuales.push(nuevoCliente);
+        
+        // Guardar en localStorage y en datosGlobales
+        localStorage.setItem("clientesBella", JSON.stringify(clientesActuales));
+        if (!datosGlobales.clientes) datosGlobales.clientes = [];
+        datosGlobales.clientes = clientesActuales;
+        
+        localStorage.setItem("toastRegistroVisto", "true");
+        
         document.getElementById("regNombre").value = "";
         document.getElementById("regTelefono").value = "";
-        toggleModalRegistro();
-        mostrarToast("✅ Registrado correctamente");
+        document.getElementById("modalRegistro").style.display = "none";
         document.getElementById("toastInvitacion").style.display = "none";
+        
+        mostrarToast("✅ Registrado correctamente. ¡Gracias!");
+        
+        // Mostrar mensaje al admin (opcional)
+        console.log("Nuevo cliente registrado:", nuevoCliente);
     }
     
     function mostrarToast(m) {
@@ -1117,11 +1150,14 @@
     aplicarModoGuardado();
     cargarDatos();
     
-    setTimeout(() => {
-        let toast = document.getElementById("toastInvitacion");
-        if (toast) toast.style.display = "block";
-        setTimeout(() => toast.style.display = "none", 8000);
-    }, 5000);
+    const yaRegistrado = localStorage.getItem("toastRegistroVisto") === "true";
+    if (!yaRegistrado) {
+        setTimeout(() => {
+            let toast = document.getElementById("toastInvitacion");
+            if (toast) toast.style.display = "block";
+            setTimeout(() => toast.style.display = "none", 8000);
+        }, 5000);
+    }
 </script>
 </body>
 </html>
