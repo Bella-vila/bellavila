@@ -1,12 +1,12 @@
 {
   "empresa": {
     "nombre": "BellaVila",
-    "whatsapp": "5351234567",
+    "whatsapp": "5353602613",
     "ubicacion": "La Habana, Cuba",
     "email": "bellavila@gmail.com",
     "horario": "Lunes a Sábado 9-8",
     "mapa": "",
-    "logo": ""
+    "logo": "https://i.postimg.cc/fbGJ3qFX/image-52.jpg"
   },
   "carrusel": [
     {
@@ -48,14 +48,25 @@
   "galeria": [
     {
       "id": 1779753093847,
-      "titulo": "Dulce araña",
+      "titulo": "CORAZON ENAMORADO",
       "categoria": "cumpleanos",
       "imagen": "https://i.postimg.cc/5NYtGNMd/IMG-20260225-WA0079.jpg",
       "descripcion": "",
       "oferta": false
     }
   ],
-  "productos": [],
+  "productos": [
+    {
+      "id": 1779753523574,
+      "nombre": "Cake en forma de libro",
+      "precio": "40 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/QtYX4v4g/IMG-20260225-WA0093.jpg"
+    }
+  ],
   "config": {
     "instagram": "",
     "facebook": "",
