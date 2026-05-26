@@ -218,6 +218,118 @@
       "imagen": "https://i.postimg.cc/LsJJ8g95/image.jpg",
       "descripcion": "",
       "oferta": false
+    },
+    {
+      "id": 1779766322736,
+      "titulo": "ETERNO RIVAL",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/D0t7FL3R/IMG-20260319-WA0003.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766484856,
+      "titulo": "CHOCOROLL",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/d0BQdhG6/IMG-20260225-WA0086.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766522384,
+      "titulo": "SORPRESA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/5yG20DLp/IMG-20260225-WA0076.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766594176,
+      "titulo": "PRINCESA CON ALAS",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/SKqNJ6Yk/IMG-20260225-WA0083.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766687664,
+      "titulo": "RAYO DE  SOL",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/kgWgJ1GM/IMG-20260225-WA0082.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766762240,
+      "titulo": "ABRACADABRA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/85X1KxKr/IMG-20260225-WA0090.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766802240,
+      "titulo": "ALA MADRID",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/tCX5tw0h/IMG-20260225-WA0038.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779766920576,
+      "titulo": "CORONA EXTRA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/ZKVLfHZ7/IMG-20260225-WA0040.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767008144,
+      "titulo": "PODER FEMENINO",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/Y0XmxXgP/IMG-20260225-WA0054.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767072176,
+      "titulo": "DULCE ELEGANCIA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/nV1Kz2sz/IMG-20260225-WA0046.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767121944,
+      "titulo": "ROJO INTENSO",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/MHGnXy49/IMG-20260225-WA0065.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767283655,
+      "titulo": "PASTEL MICKEY",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/nrTqPV81/IMG-20260225-WA0045.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767334303,
+      "titulo": "14 POR SIEMPRE",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/rFPr0PqT/IMG-20260225-WA0060.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779767375703,
+      "titulo": "NAVIDAD",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/nLkV7Xqk/IMG-20260225-WA0087.jpg",
+      "descripcion": "",
+      "oferta": false
     }
   ],
   "productos": [
@@ -355,7 +467,7 @@
   "config": {
     "instagram": "https://www.instagram.com/claufig7?igsh=MTViaHp5eGllcWR6bA==",
     "facebook": "https://www.facebook.com/share/1FmTsXedzT/",
-    "password": "1234"
+    "password": "pito34.tex"
   },
   "clientes": [
     {
