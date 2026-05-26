@@ -53,18 +53,202 @@
       "imagen": "https://i.postimg.cc/5NYtGNMd/IMG-20260225-WA0079.jpg",
       "descripcion": "",
       "oferta": false
+    },
+    {
+      "id": 1779756278974,
+      "titulo": "CAKE CULE",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/hGXXtQDc/image.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756344629,
+      "titulo": "UNION ETERNA",
+      "categoria": "boda",
+      "imagen": "https://i.postimg.cc/KY0LFCXq/IMG-20260225-WA0091.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756638973,
+      "titulo": "VEHICULO DULCE",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/YqF1gXgt/IMG-20260417-WA0023.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756695028,
+      "titulo": "HISTORIA ETERNA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/SRvDsjwg/IMG-20260521-WA0021.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756811893,
+      "titulo": "DOBLE TENTACION",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/Nfm7Hg2Z/IMG-20260521-WA0000.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756848092,
+      "titulo": "CHOCOLATE PARA TODOS",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/cJKTtnpV/IMG-20260225-WA0035.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756889084,
+      "titulo": "REGALO DE PRINCESA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/Fz2pQzdk/IMG-20260517-WA0015.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779756945884,
+      "titulo": "DULCE ARAÑA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/PxSxGCxT/IMG-20260225-WA0073.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757029156,
+      "titulo": "TROPICAL Y DULCE",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/TPXhn8Fv/IMG-20260225-WA0069.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757073740,
+      "titulo": "NOCHE INTENSA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/LX9X0tmN/IMG-20260225-WA0070.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757192837,
+      "titulo": "6 CAPRICHOS",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/3wkkx084/grok-1772244166347.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757236484,
+      "titulo": "UNION PERFECTA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/7hpqD0yx/IMG-20260521-WA0002.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757271076,
+      "titulo": "SUPER VAINILLA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/VN2drsvn/grok-1771613795672.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757315908,
+      "titulo": "REYNA DEL RIO",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/qqGGHXKs/IMG-20260225-WA0037.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757356300,
+      "titulo": "MIS QUINCE",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/3x2x8SNH/IMG-20260225-WA0081.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757396476,
+      "titulo": "CAJA PERFECTA",
+      "categoria": "corporativo",
+      "imagen": "https://i.postimg.cc/d0BQdhGT/IMG-20260225-WA0085.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757439324,
+      "titulo": "TARTA CONFI",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/W3Y2WxWT/IMG-20260225-WA0089.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1779757542908,
+      "titulo": "ANILLO DE ORO",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/LsJJ8g95/image.jpg",
+      "descripcion": "",
+      "oferta": false
     }
   ],
   "productos": [
     {
-      "id": 1779753523574,
-      "nombre": "Cake en forma de libro",
-      "precio": "40 USD",
-      "precio_oferta": "35 USD",
-      "descripcion": "",
+      "id": 1779757814316,
+      "nombre": "CAKE DE 2 PISOS",
+      "precio": "65 USD",
+      "precio_oferta": "60 USD",
+      "descripcion": "MEDIDAS\nBASE /25 CM DE DIAMETRO \nSUPERIOR /15 CM DE DIAMETRO\n6 BIZCOCHOS Y 4 RELLENOS ",
+      "destacado": true,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/Fz2pQzdk/IMG-20260517-WA0015.jpg"
+    },
+    {
+      "id": 1779758107188,
+      "nombre": "CAKE DE 3 PANETELAS",
+      "precio": "55 USD -75 USD",
+      "precio_oferta": "50 USD - 70 USD",
+      "descripcion": "1-BASE 20CM*20CM C/U /SUPERIOR 12CM*12CM \n  8 RELLENOS Y 11 BIZCOCHOS                 75 USD \n2-BASE 15CM*15CM C/U  /SUPERIOR 15CM*10CM \n  6 RELLENOS Y 9 BIZCOCHOS                  55 USD",
       "destacado": false,
       "oferta": true,
-      "imagen": "https://i.postimg.cc/QtYX4v4g/IMG-20260225-WA0093.jpg"
+      "imagen": "https://i.postimg.cc/SRXmwV33/IMG-20260520-WA0041.jpg"
+    },
+    {
+      "id": 1779758336428,
+      "nombre": "CAKE DE 3 PISOS",
+      "precio": "85 USD",
+      "precio_oferta": "80 USD",
+      "descripcion": "BASE DE 25CM DE DIAMETRO /SEGUNDO 20CM DE DIAMETRO / SUPERIOR 12CM \n 6 RELLENOS Y 9 BIZCOCHOS ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/MZ46y2f9/IMG-20260521-WA0022.jpg"
+    },
+    {
+      "id": 1779758480460,
+      "nombre": "CAKE  CON BOTELLA",
+      "precio": "45 USD",
+      "precio_oferta": "40 USD",
+      "descripcion": "MEDIDAS \n20CM DIAMETRO POR 20CM DE ALTO \n3 RELLENOS Y 4 BIZCOCHOS \nBOTELLA /VINO,CERVEZA,SIDRA,RON",
+      "destacado": true,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/Nfm7Hg2Z/IMG-20260521-WA0000.jpg"
+    },
+    {
+      "id": 1779758589556,
+      "nombre": "CAKE DE LIBRO",
+      "precio": "40 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "PERSONALIZADO CON IMAGENES COMESTIBLES \n2 BOZCOCHOS Y 1 RELLENO",
+      "destacado": true,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/SRvDsjwg/IMG-20260521-WA0021.jpg"
     }
   ],
   "config": {
