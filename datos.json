@@ -439,8 +439,8 @@
       "precio": "15USD-18USD/20USD-25USD/30USD-35USD",
       "precio_oferta": null,
       "descripcion": "MEDIDAS \n1-20CM DE DIAMETRO POR 8CM DE ALTO    -15USD-18USD\n2-20CM DE DIAMETRO POR 12CM DE ALTO   -20USD-25USD\n3--20CM DE DIAMETRO POR 20CM DE ALTO  -30USD-35USD",
-      "destacado": false,
-      "oferta": false,
+      "destacado": true,
+      "oferta": true,
       "imagen": "https://i.postimg.cc/85X1KxKr/IMG-20260225-WA0090.jpg"
     },
     {
