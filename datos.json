@@ -341,14 +341,14 @@
       "descripcion": "MEDIDAS\nBASE /25 CM DE DIAMETRO \nSUPERIOR /15 CM DE DIAMETRO\n6 BIZCOCHOS Y 4 RELLENOS ",
       "destacado": true,
       "oferta": true,
-      "imagen": "https://i.postimg.cc/Fz2pQzdk/IMG-20260517-WA0015.jpg"
+      "imagen": "https://i.postimg.cc/Mp2Sdj9k/IMG-20260531-WA0000-1.jpg"
     },
     {
       "id": 1779758107188,
-      "nombre": "CAKE DE 3 PANETELAS",
-      "precio": "55 USD -75 USD",
-      "precio_oferta": "50 USD - 70 USD",
-      "descripcion": "1-BASE 20CM*20CM C/U /SUPERIOR 12CM*12CM \n  8 RELLENOS Y 11 BIZCOCHOS                 75 USD \n2-BASE 15CM*15CM C/U  /SUPERIOR 15CM*10CM \n  6 RELLENOS Y 9 BIZCOCHOS                  55 USD",
+      "nombre": "TARTA TRIATLON ",
+      "precio": "55 USD",
+      "precio_oferta": "50 USD",
+      "descripcion": "\nBASE 15CM*15CM C/U  /SUPERIOR 15CM*10CM \n  6 RELLENOS Y 9 BIZCOCHOS                  ",
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/SRXmwV33/IMG-20260520-WA0041.jpg"
@@ -376,9 +376,9 @@
     {
       "id": 1779761842298,
       "nombre": "PASTEL  BOMBON",
-      "precio": "15 USD -25 USD -40 USD",
+      "precio": "15 USD ",
       "precio_oferta": null,
-      "descripcion": "CLASICO /15CM DE DIAMETRO  15USD \nBOMBON  /20CM *10CM        25USD\nSUPER BOMBON  /20CM *20CM  40USD ",
+      "descripcion": "15CM DE DIAMETRO POR 15CM DE ALTO / CREMA DE CHOCOLATE Y COBERTURA DE CHOCOLATE \n",
       "destacado": false,
       "oferta": false,
       "imagen": "https://i.postimg.cc/cJKTtnpV/IMG-20260225-WA0035.jpg"
@@ -416,21 +416,21 @@
     {
       "id": 1779763204953,
       "nombre": "CAKE DE CORAZON",
-      "precio": "20USD -38USD",
-      "precio_oferta": "18USD -35USD",
-      "descripcion": "1-CLASICO / 2 MASAS 1 RELLENO /20CM DE DIAMETRO POR 8CM EN ALTO -20USD\n2-SUPER CORAZON /3 MASAS 2 RELLENOS / 20CM DE DIAMETRO POR 20CM -38USD ",
+      "precio": "20USD ",
+      "precio_oferta": "18USD",
+      "descripcion": " 2 MASAS 1 RELLENO /20CM DE DIAMETRO POR 8CM EN ALTO -20USD\n ",
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/5NYtGNMd/IMG-20260225-WA0079.jpg"
     },
     {
       "id": 1779763444969,
-      "nombre": "CAKE DE 15CM/ MERENGUE -NATA",
-      "precio": "8USD-10USD",
-      "precio_oferta": null,
-      "descripcion": "MEDIDAS \n1-15CM DE DIAMETRO POR 8CM DE ALTO   -8USD-10USD\n2-15CM DE DIAMETRO POR 20CM DE ALTO  -18USD-20USD",
+      "nombre": "MINI MERENGUE ",
+      "precio": "10 USD",
+      "precio_oferta": "8  USD",
+      "descripcion": "MEDIDAS \n15CM DE DIAMETRO POR 8CM DE ALTO   \n",
       "destacado": false,
-      "oferta": false,
+      "oferta": true,
       "imagen": "https://i.postimg.cc/LsJJ8g95/image.jpg"
     },
     {
@@ -478,10 +478,80 @@
       "nombre": "BUFFET  SATURNO",
       "precio": "100 USD",
       "precio_oferta": null,
-      "descripcion": "20 DULCES FINOS \n20 ENSALADAS FRIAS \n40 CROQUETAS \n20 VASITOS DE POSTRE \n20 PANSITOS MIXTOS \n20 CUPCAKES RELLENOS \n20 EMPANADAS MIXTAS",
-      "destacado": false,
+      "descripcion": "20 DULCES FINOS \n20 ENSALADAS FRIAS/8OZ\n40 CROQUETAS \n20 VASITOS DE POSTRE /8OZ\n20 PANSITOS MIXTOS \n20 CUPCAKES RELLENOS \n20 EMPANADAS MIXTAS",
+      "destacado": true,
       "oferta": false,
       "imagen": "https://i.postimg.cc/7LtHhz6n/image-51-1.jpg"
+    },
+    {
+      "id": 1780600903986,
+      "nombre": "BUFFET JUPITER",
+      "precio": "250 USD",
+      "precio_oferta": null,
+      "descripcion": "50 DULCES FINOS \n50 ENSALADAS FRIAS \n50 CROQUETAS \n50 VASITOS DE POSTRE DE 8OZ\n50 PANSITOS\n50 CUPCAKES \n50 ROLLITOS DE JAMON/QUESO \n50 EMPANADAS ",
+      "destacado": true,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/R0Y91nt0/IMG-20260604-WA0015-1.jpg"
+    },
+    {
+      "id": 1780601154057,
+      "nombre": "FUFFET  JUNO",
+      "precio": "450",
+      "precio_oferta": null,
+      "descripcion": "100 DULCES FINOS \n100 ENSALADAS FRIAS/8OZ\n200 CROQUETAS \n100 VASITOS DE POSTRE /8OZ\n100 PANSITOS \n100 CUPCAKES \n100 ROLLITOS DE JAMON/QUESO \n100 EMPANADAS ",
+      "destacado": true,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/3xJHPZCy/IMG-20260604-WA0014-1.jpg"
+    },
+    {
+      "id": 1780601661249,
+      "nombre": "BIG TORTA TRIATLON",
+      "precio": "75 USD",
+      "precio_oferta": "70 USD",
+      "descripcion": "BASE 20CM POR 20CM C/U \nSUPERIOR 12CMPOR 12CM \n6 BIZCOCHOS Y 4 RELLENOS ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/nzrTvXJy/IMG-20260520-WA0040-1.jpg"
+    },
+    {
+      "id": 1780603329848,
+      "nombre": "SUPER BOMBON",
+      "precio": "40 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "CREMA DE CHOCOLATE CON COBERTURA /BIZCOCHO DE CHOCOLATE \nMEDIDAS /20CM DE DIAMERTO POR 20CM DE ALTO ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/RFpMs2sH/IMG-20260303-WA0007.jpg"
+    },
+    {
+      "id": 1780603570920,
+      "nombre": "SUPER CORAZON",
+      "precio": "38 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "3 MASAS 2 RELLENOS \nMEDIDAS /20CM DE DIAMETRO POR 20CM DE ALTO ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/nV1Kz2sz/IMG-20260225-WA0046.jpg"
+    },
+    {
+      "id": 1780603791344,
+      "nombre": "MINI NATA",
+      "precio": "12 USD",
+      "precio_oferta": "10 USD",
+      "descripcion": "15CM DE DIAMETRO POR 8CM DE ALTO ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/VN2drsvn/grok-1771613795672.jpg"
+    },
+    {
+      "id": 1780603942728,
+      "nombre": "BIG MINI NATA",
+      "precio": "22 USD",
+      "precio_oferta": "20 USD",
+      "descripcion": "MEDIDAS /15CM DE DIAMERTO POR 20CM DE ALTO \n4 MASAS Y 3 RELLENOS ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/cJZ4rRtK/IMG-20260225-WA0084.jpg"
     }
   ],
   "config": {
