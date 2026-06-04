@@ -156,14 +156,6 @@
       "oferta": false
     },
     {
-      "id": 1779757192837,
-      "titulo": "6 CAPRICHOS",
-      "categoria": "corporativo",
-      "imagen": "https://i.postimg.cc/3wkkx084/grok-1772244166347.jpg",
-      "descripcion": "",
-      "oferta": false
-    },
-    {
       "id": 1779757236484,
       "titulo": "UNION PERFECTA",
       "categoria": "corporativo",
@@ -328,6 +320,94 @@
       "titulo": "NAVIDAD",
       "categoria": "corporativo",
       "imagen": "https://i.postimg.cc/nLkV7Xqk/IMG-20260225-WA0087.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607333174,
+      "titulo": "PAGINAS DULCES",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/3JGqL5z7/IMG-20260225-WA0093.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607404582,
+      "titulo": "SPIDER-MAN",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/Nfg47ShN/IMG-20260225-WA0039.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607466878,
+      "titulo": "NATURAL",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/4x0QG3Yr/IMG-20260225-WA0041.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607516590,
+      "titulo": "MARIPOSA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/7LTMZyzF/IMG-20260225-WA0042.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607547182,
+      "titulo": "ANIMADO",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/pTbQ91Yd/IMG-20260225-WA0043.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607568062,
+      "titulo": "MINIE",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/ydmm0XvT/IMG-20260225-WA0044.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607680566,
+      "titulo": "HALLOWEEN",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/DyyrbGst/IMG-20260225-WA0047.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607746102,
+      "titulo": "NAPOLITANA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/RVRj4f1F/image-154-1.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607773622,
+      "titulo": "BUFEET",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/7LtHhz6n/image-51-1.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607797822,
+      "titulo": "UNICORNIO",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/Mp2Sdj9k/IMG-20260531-WA0000-1.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1780607825374,
+      "titulo": "TARTA PIÑA",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/rmrP3fnz/IMG-20260529-WA0003-1.jpg",
       "descripcion": "",
       "oferta": false
     }
@@ -562,6 +642,76 @@
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/hGXXtQDc/image.jpg"
+    },
+    {
+      "id": 1780605128735,
+      "nombre": "TORTA DE MANTEQUILLA",
+      "precio": "38 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "MASA HUMEDA EN TRES LECHES CON RELLENO DE CREMA DE MANTEQUILLA Y FRUTOS SECOS \nMEDIDAS 20CM DE DIAMETRO POR 12CM DE ALTO ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/tTvXS8S3/IMG-20260303-WA0008.jpg"
+    },
+    {
+      "id": 1780605791671,
+      "nombre": "PASTEL DE PIÑA",
+      "precio": "10 USD",
+      "precio_oferta": null,
+      "descripcion": "PASTEL CON FRUTAS DE TEMPORADA ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/rmrP3fnz/IMG-20260529-WA0003-1.jpg"
+    },
+    {
+      "id": 1780606479527,
+      "nombre": "CAKE 20-8 NATA",
+      "precio": "18 USD",
+      "precio_oferta": null,
+      "descripcion": "MEDIDAS 20CM DE DIAMETRO Y 8CM DE ALTO",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/DwRLDYNr/IMG-20260225-WA0050.jpg"
+    },
+    {
+      "id": 1780606665622,
+      "nombre": "CAKE 20-12 NATA",
+      "precio": "25 USD",
+      "precio_oferta": null,
+      "descripcion": "MEDIDAS 20CM DE DIAMETRO Y 12CM ALTO \n3 MASAS 2 RELLENOS",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/gjfGd8PP/IMG-20260521-WA0001.jpg"
+    },
+    {
+      "id": 1780606904950,
+      "nombre": "CAJA REGALO",
+      "precio": "18 USD",
+      "precio_oferta": null,
+      "descripcion": "CAJA DE REGALO CON MINI CAKE DE 15CM DE DIAMETRO Y 2 CUPCAKES \n(PERZONALIZADA)",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/d0BQdhGT/IMG-20260225-WA0085.jpg"
+    },
+    {
+      "id": 1780607032830,
+      "nombre": "CAJA REGALO 2",
+      "precio": "20 USD",
+      "precio_oferta": null,
+      "descripcion": "CAJA DE REGALO CON MINI CAKE DE 15 CM Y 5 CUPCAKES \n(PERSONALIZADO)",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/v8SB3xkz/IMG-20260225-WA0078.jpg"
+    },
+    {
+      "id": 1780607155790,
+      "nombre": "CAJA CUPCAKES",
+      "precio": "5 USD",
+      "precio_oferta": null,
+      "descripcion": "CAJA CON 6 CUPCAKES RELLENOS PERSONALIZADO ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/d3XV1gGw/IMG-20260225-WA0075.jpg"
     }
   ],
   "config": {
