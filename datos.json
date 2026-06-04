@@ -440,7 +440,7 @@
       "precio_oferta": null,
       "descripcion": "MEDIDAS \n1-20CM DE DIAMETRO POR 8CM DE ALTO    -15USD-18USD\n2-20CM DE DIAMETRO POR 12CM DE ALTO   -20USD-25USD\n3--20CM DE DIAMETRO POR 20CM DE ALTO  -30USD-35USD",
       "destacado": true,
-      "oferta": true,
+      "oferta": false,
       "imagen": "https://i.postimg.cc/85X1KxKr/IMG-20260225-WA0090.jpg"
     },
     {
@@ -462,6 +462,26 @@
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/MZ46y2f9/IMG-20260521-WA0022.jpg"
+    },
+    {
+      "id": 1780596132924,
+      "nombre": "PASTEL FLORK",
+      "precio": "15 USD",
+      "precio_oferta": "12 USD",
+      "descripcion": "PASTEL DECORADO CON CARICATURAS FLORK \nMEDIDAS / 20CM DE DIAMETRO POR 10CM DE ALTO ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/4dG5KYSh/image-101-1.jpg"
+    },
+    {
+      "id": 1780596362643,
+      "nombre": "BUFFET  SATURNO",
+      "precio": "100 USD",
+      "precio_oferta": null,
+      "descripcion": "20 DULCES FINOS \n20 ENSALADAS FRIAS \n40 CROQUETAS \n20 VASITOS DE POSTRE \n20 PANSITOS MIXTOS \n20 CUPCAKES RELLENOS \n20 EMPANADAS MIXTAS",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/7LtHhz6n/image-51-1.jpg"
     }
   ],
   "config": {
