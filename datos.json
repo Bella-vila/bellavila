@@ -386,19 +386,19 @@
     {
       "id": 1779762060946,
       "nombre": "CAKE DE CONFITURA",
-      "precio": "18 USD -35USD",
-      "precio_oferta": null,
-      "descripcion": "NATA /MASA DE VAINILLA /CHOCO\nCLASICO /2 MASAS 1 RELLENO   18 USD \nSUPER CONFI /3 MASAS 2 RELLENOS  35 USD ",
+      "precio": "38 USD ",
+      "precio_oferta": "35 USD",
+      "descripcion": "TORTA DE CONFITURAS DE 20CM DE DIAMETRO POR 12CM DE ALTO ",
       "destacado": false,
-      "oferta": false,
+      "oferta": true,
       "imagen": "https://i.postimg.cc/vTm4DWjH/IMG-20260225-WA0064.jpg"
     },
     {
       "id": 1779762530546,
       "nombre": "TARTA DE CONFITURAS",
-      "precio": "18USD -28USD",
-      "precio_oferta": "15USD -25 USD",
-      "descripcion": "1- TARTA CLASICA \n   MASA DE VAINILLA , DULCE DE LECHE MAS CONFITURAS 18USD \n2- SUPER TARTA \n   MASA TRES LECHES , DULCE DE LECHE MAS CONFITURAS 28 USD ",
+      "precio": "22 USD ",
+      "precio_oferta": "20 USD",
+      "descripcion": "BIZCOCHO HUMEDO EN TRES LECHES CON CONFITURAS \nMEDIDAS 20CM DE DIAMETRO POR 8CM DE ALTO ",
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/Kj9g59Bh/IMG-20260225-WA0056.jpg"
@@ -435,12 +435,12 @@
     },
     {
       "id": 1779763714793,
-      "nombre": "CAKE DE 20CM /MERENGUE -NATA",
-      "precio": "15USD-18USD/20USD-25USD/30USD-35USD",
-      "precio_oferta": null,
-      "descripcion": "MEDIDAS \n1-20CM DE DIAMETRO POR 8CM DE ALTO    -15USD-18USD\n2-20CM DE DIAMETRO POR 12CM DE ALTO   -20USD-25USD\n3--20CM DE DIAMETRO POR 20CM DE ALTO  -30USD-35USD",
+      "nombre": "SUPER PASTEL ",
+      "precio": "35 USD",
+      "precio_oferta": "30 USD",
+      "descripcion": "MEDIDAS\n20CM DE DIAMETRO POR 20CM DE ALTO \n4 MASAS CON 3 RELLENOS \nCAKE DE MERENGUE ",
       "destacado": true,
-      "oferta": false,
+      "oferta": true,
       "imagen": "https://i.postimg.cc/85X1KxKr/IMG-20260225-WA0090.jpg"
     },
     {
@@ -495,7 +495,7 @@
     },
     {
       "id": 1780601154057,
-      "nombre": "FUFFET  JUNO",
+      "nombre": "BUFFET  JUNO",
       "precio": "450",
       "precio_oferta": null,
       "descripcion": "100 DULCES FINOS \n100 ENSALADAS FRIAS/8OZ\n200 CROQUETAS \n100 VASITOS DE POSTRE /8OZ\n100 PANSITOS \n100 CUPCAKES \n100 ROLLITOS DE JAMON/QUESO \n100 EMPANADAS ",
@@ -552,6 +552,16 @@
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/cJZ4rRtK/IMG-20260225-WA0084.jpg"
+    },
+    {
+      "id": 1780604923280,
+      "nombre": "SUPER NATA",
+      "precio": "40 USD",
+      "precio_oferta": "35 USD",
+      "descripcion": "20CM DE DIAMETRO POR 20CM DE ALTO \n4 MASAS Y 3 RELLENOS\nCAKE DE NATA  ",
+      "destacado": false,
+      "oferta": true,
+      "imagen": "https://i.postimg.cc/hGXXtQDc/image.jpg"
     }
   ],
   "config": {
