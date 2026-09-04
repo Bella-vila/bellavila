@@ -410,6 +410,94 @@
       "imagen": "https://i.postimg.cc/rmrP3fnz/IMG-20260529-WA0003-1.jpg",
       "descripcion": "",
       "oferta": false
+    },
+    {
+      "id": 1788497683467,
+      "titulo": "guerreras k pop",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/ZK0pWxTc/IMG-20260903-WA0001.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497705371,
+      "titulo": "girasoles",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/v8058Ndg/IMG-20260825-WA0015.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497736603,
+      "titulo": "libro familiar",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/7Yb05nxc/IMG-20260903-WA0004.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497770371,
+      "titulo": "dulces",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/6qbZHyhb/IMG-20260825-WA0011.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497791427,
+      "titulo": "donas",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/D0pGC8cr/IMG-20260813-WA0005.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497812387,
+      "titulo": "pepa pig",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/7htzBfNV/IMG-20260818-WA0006.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497828787,
+      "titulo": "flor",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/QCY76Hqp/IMG-20260818-WA0005.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497869715,
+      "titulo": "Cake doble",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/QCd5kpcS/IMG-20260813-WA0000.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497898932,
+      "titulo": "Cohiba",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/nzZqM8zK/IMG-20260723-WA0023.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497920908,
+      "titulo": "buffets",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/j5XP78nK/IMG-20260808-WA0004.jpg",
+      "descripcion": "",
+      "oferta": false
+    },
+    {
+      "id": 1788497944956,
+      "titulo": "postres",
+      "categoria": "cumpleanos",
+      "imagen": "https://i.postimg.cc/0jymdp7k/IMG-20260808-WA0005.jpg",
+      "descripcion": "",
+      "oferta": false
     }
   ],
   "productos": [
@@ -436,11 +524,11 @@
     {
       "id": 1779758480460,
       "nombre": "CAKE  CON BOTELLA",
-      "precio": "45 USD",
-      "precio_oferta": "40 USD",
+      "precio": "50 USD",
+      "precio_oferta": null,
       "descripcion": "MEDIDAS \n20CM DIAMETRO POR 20CM DE ALTO \n3 RELLENOS Y 4 BIZCOCHOS \nBOTELLA /VINO,CERVEZA,SIDRA,RON",
-      "destacado": true,
-      "oferta": true,
+      "destacado": false,
+      "oferta": false,
       "imagen": "https://i.postimg.cc/Nfm7Hg2Z/IMG-20260521-WA0000.jpg"
     },
     {
@@ -456,7 +544,7 @@
     {
       "id": 1779761842298,
       "nombre": "PASTEL  BOMBON",
-      "precio": "15 USD ",
+      "precio": "20 USD ",
       "precio_oferta": null,
       "descripcion": "15CM DE DIAMETRO POR 15CM DE ALTO / CREMA DE CHOCOLATE Y COBERTURA DE CHOCOLATE \n",
       "destacado": false,
@@ -552,36 +640,6 @@
       "destacado": false,
       "oferta": true,
       "imagen": "https://i.postimg.cc/4dG5KYSh/image-101-1.jpg"
-    },
-    {
-      "id": 1780596362643,
-      "nombre": "BUFFET  SATURNO",
-      "precio": "100 USD",
-      "precio_oferta": null,
-      "descripcion": "20 DULCES FINOS \n20 ENSALADAS FRIAS/8OZ\n40 CROQUETAS \n20 VASITOS DE POSTRE /8OZ\n20 PANSITOS MIXTOS \n20 CUPCAKES RELLENOS \n20 EMPANADAS MIXTAS",
-      "destacado": true,
-      "oferta": false,
-      "imagen": "https://i.postimg.cc/7LtHhz6n/image-51-1.jpg"
-    },
-    {
-      "id": 1780600903986,
-      "nombre": "BUFFET JUPITER",
-      "precio": "250 USD",
-      "precio_oferta": null,
-      "descripcion": "50 DULCES FINOS \n50 ENSALADAS FRIAS \n50 CROQUETAS \n50 VASITOS DE POSTRE DE 8OZ\n50 PANSITOS\n50 CUPCAKES \n50 ROLLITOS DE JAMON/QUESO \n50 EMPANADAS ",
-      "destacado": true,
-      "oferta": false,
-      "imagen": "https://i.postimg.cc/R0Y91nt0/IMG-20260604-WA0015-1.jpg"
-    },
-    {
-      "id": 1780601154057,
-      "nombre": "BUFFET  JUNO",
-      "precio": "450",
-      "precio_oferta": null,
-      "descripcion": "100 DULCES FINOS \n100 ENSALADAS FRIAS/8OZ\n200 CROQUETAS \n100 VASITOS DE POSTRE /8OZ\n100 PANSITOS \n100 CUPCAKES \n100 ROLLITOS DE JAMON/QUESO \n100 EMPANADAS ",
-      "destacado": true,
-      "oferta": false,
-      "imagen": "https://i.postimg.cc/3xJHPZCy/IMG-20260604-WA0014-1.jpg"
     },
     {
       "id": 1780601661249,
@@ -712,6 +770,126 @@
       "destacado": false,
       "oferta": false,
       "imagen": "https://i.postimg.cc/d3XV1gGw/IMG-20260225-WA0075.jpg"
+    },
+    {
+      "id": 1788496158617,
+      "nombre": "Cake Slytherin",
+      "precio": "65 USD ",
+      "precio_oferta": null,
+      "descripcion": "cake de dos pisos base 25 diametro parte superior 15 de diametro 4 masas y 3 rellenos ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/sfmv9Q6M/IMG-20260903-WA0000-1.jpg"
+    },
+    {
+      "id": 1788496294873,
+      "nombre": "Cake de confituras",
+      "precio": "35",
+      "precio_oferta": null,
+      "descripcion": "TORTA DE CONFITURAS DE 20CM DE DIAMETRO POR 12CM DE ALTO ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/9QJ6LV3c/IMG-20260903-WA0006-1.jpg"
+    },
+    {
+      "id": 1788496673762,
+      "nombre": "Jimagua",
+      "precio": "40 USD",
+      "precio_oferta": null,
+      "descripcion": "Cake de doble masa cada parte con 3 bizcochos y 2 rellenos  medidas 40x15 cm ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/cHZf6qHB/IMG-20260723-WA0009.jpg"
+    },
+    {
+      "id": 1788496817442,
+      "nombre": "Cake rectangular",
+      "precio": "35 USD",
+      "precio_oferta": null,
+      "descripcion": "2 masas con 1 relleno 40x35 ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/bNdkZ9yX/IMG-20260903-WA0003.jpg"
+    },
+    {
+      "id": 1788497096994,
+      "nombre": "Croquetas y Bolitas de queso",
+      "precio": "15 USD",
+      "precio_oferta": null,
+      "descripcion": "20 bolitas de queso gouda  (sin freir) \n20 croquetas jamon (sin freir) ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/WzYZ9h7C/IMG-20260825-WA0012.jpg"
+    },
+    {
+      "id": 1788497169794,
+      "nombre": "leonesas",
+      "precio": "7 usd",
+      "precio_oferta": null,
+      "descripcion": "leonesas 15 unidades con chocolate y azucar glass ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/XqYFcw9r/IMG-20260808-WA0006.jpg"
+    },
+    {
+      "id": 1788497220082,
+      "nombre": "eclear",
+      "precio": "7 usd",
+      "precio_oferta": null,
+      "descripcion": "eclear 10 unidades rellenos ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/6qbZHyhb/IMG-20260825-WA0011.jpg"
+    },
+    {
+      "id": 1788497284410,
+      "nombre": "Marquesitas",
+      "precio": "16 USD",
+      "precio_oferta": null,
+      "descripcion": "marquesitas 25 unidades masa chocolate o vainilla ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/QCY76Hq1/IMG-20260813-WA0002.jpg"
+    },
+    {
+      "id": 1788497337194,
+      "nombre": "donas",
+      "precio": "8 usd",
+      "precio_oferta": null,
+      "descripcion": "12 unidades 35g decoradas con chocolate ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/MHpRby1m/IMG-20260808-WA0007.jpg"
+    },
+    {
+      "id": 1788497393938,
+      "nombre": "vasitos de postre",
+      "precio": "15 usd",
+      "precio_oferta": null,
+      "descripcion": "12 unidades vasos de 8 onzas ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/0jymdp7k/IMG-20260808-WA0005.jpg"
+    },
+    {
+      "id": 1788497468011,
+      "nombre": "panes artesanales",
+      "precio": "18 usd",
+      "precio_oferta": null,
+      "descripcion": "20 unidades panes con jamon y queso decorados con aceitunas",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/1X7FWfKJ/IMG-20260825-WA0009.jpg"
+    },
+    {
+      "id": 1788497544451,
+      "nombre": "ensalada fria",
+      "precio": "20 usd",
+      "precio_oferta": null,
+      "descripcion": "vasos de 8 onzas 15 unidades ensalada de jamon ",
+      "destacado": false,
+      "oferta": false,
+      "imagen": "https://i.postimg.cc/FzCSP7xT/IMG-20260825-WA0010.jpg"
     }
   ],
   "config": {
